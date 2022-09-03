@@ -1,4 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DynaPuff&family=Fira+Sans+Condensed&family=Heebo:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap");
 /* header */
+
+.blog-btn {
+  border: none;
+  background: transparent;
+}
 
 .header {
 }
@@ -27,7 +33,6 @@
 }
 
 .news-hight {
-  
 }
 .news-details {
   text-overflow: ellipsis;
@@ -38,7 +43,27 @@
   -webkit-box-orient: vertical;
   white-space: normal;
 }
-p, .item-found {
+p,
+.item-found {
   color: rgb(110, 110, 110);
+}
+
+.item-found h3 {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+button:link {
+  color: blue;
+}
+button:visited {
+  color: purple;
+}
+button:hover {
+  color: #ffc107;
+}
+button:active {
+  color: rgb(243, 16, 16);
 }
 

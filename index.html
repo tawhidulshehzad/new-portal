@@ -36,7 +36,11 @@
                 >
               </div>
               <div>
-                <a class="text-decoration-none text-dark fs-5" href="">Blog</a>
+                <button class="blog-btn">
+                  <a class="text-decoration-none text-dark fs-5" href=""
+                    >Blog</a
+                  >
+                </button>
               </div>
               <div class="mx-3">
                 <img class="header-img rounded-circle" src="one.jpg" alt="" />
@@ -58,7 +62,7 @@
 
       <!-- Items found -->
       <section
-        class="container pt-3 shadow-sm mt-4"
+        class="container pt-3 shadow-sm mt-4 item-found"
         id="itemsFound-Container"
       ></section>
       <!-- News OverView -->
@@ -67,7 +71,43 @@
       <!--========== MOdal========= -->
 
       <section id="modal-cantainer">
-        
+        <div
+          class="modal fade"
+          id="newsModal"
+          tabindex="-1"
+          aria-labelledby="newsModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="NewsTitleModal"></h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div id="newsModalBody" class="modal-body"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- spinner -->
+      <section id="spinner" class="d-none container text-center mt-5">
+        <div class="spinner-border m-5" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
       </section>
     </main>
     <script src="Js/news.js"></script>
@@ -78,3 +118,6 @@
     ></script>
   </body>
 </html>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
