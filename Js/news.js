@@ -11,7 +11,7 @@ const displayCategory = (categories) => {
     // console.log(category);
     const categoryDiv = document.createElement("div");
     categoryDiv.innerHTML = `
-            <button onclick="loadNews("${category.category_id}")" class="ctg-btn bg-white fs-5 px-3">${category.category_name}</button>
+            <button onclick="loadNews(${category.category_id})" class="ctg-btn bg-white fs-5 px-3">${category.category_name}</button>
           
     `;
     categoryContainer.appendChild(categoryDiv);
@@ -25,13 +25,7 @@ const loadNews = (categoryId) => {
     .then((data) => console.log(data));
 };
 
-const displayNews = () => {
-  
-}
-
-
-
-
+const displayNews = () => {};
 
 loadCategory();
 
