@@ -16,9 +16,29 @@
 .right-img-container {
   width: 50px;
   padding: 10px;
-  
 }
 .right-img-container img {
-  
   border-radius: 90%;
 }
+
+/* news left  */
+.news-img-left {
+  width: 200px;
+}
+
+.news-hight {
+  
+}
+.news-details {
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+p, .item-found {
+  color: rgb(110, 110, 110);
+}
+
