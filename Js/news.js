@@ -131,17 +131,4 @@ const toggleSpinner = (isLoading) => {
 loadCategory();
 loadNews("08");
 
-//
-// const displayCategory = (categories) => {
-//   const categoryContainer = document.getElementById("category-container");
-//   console.log(categories);
-//   const categoryDiv = document.createElement("div");
-//   categoryDiv.innerHTML = `
-//           <button class="ctg-btn bg-white fs-5 px-3">${categories[0].category_name}</button>
-//           <button class="ctg-btn bg-white fs-5 px-3">${categories[1].category_name}</button>
 
-//     `;
-//   categoryContainer.appendChild(categoryDiv);
-// };
-
-// loadNews();
