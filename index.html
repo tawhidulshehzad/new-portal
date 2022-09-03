@@ -31,15 +31,19 @@
           <div>
             <div class="d-flex header-right">
               <div class="mx-3">
-                <a class="text-decoration-none text-primary fs-5" href=""
-                  >News</a
+                <button
+                  class="text-decoration-none fs-5 news-btn"
+                  id="btn-News"
                 >
+                  News
+                </button>
               </div>
               <div>
-                <button class="blog-btn" id="btn-blog">
-                  <a class="text-decoration-none text-dark fs-5" href=""
-                    >Blog</a
-                  >
+                <button
+                  class="blog-btn text-decoration-none text-dark fs-5"
+                  id="btn-blog"
+                >
+                  Blog
                 </button>
               </div>
               <div class="mx-3">
@@ -108,6 +112,51 @@
         <div class="spinner-border m-5" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
+      </section>
+
+      <!-- Blog section -->
+      <section class="container d-none w-50" id="blog-container">
+        <h1>What is the difference between var, let, and const?</h1>
+        <p>
+          The following are the distinctions between var, let, and const
+          variable declarations in JavaScript: Variables declared with var and
+          const are only available to the current function body. Hoisted
+          variables are those declared with the var keyword. Hoisting indicates
+          that the variable can be accessed in its enclosing scope before it is
+          declared. Variables declared with the let keyword are block-scoped,
+          which means they have scope only to the block in which they are
+          declared. Const's scoping principles are the same as those of the let
+          keyword. Variables declared with the const keyword, like let
+          variables, have scope limited to the block in which they are declared.
+          Some important considerations for const include: const creates a
+          variable with a fixed value. If the variable you're declaring should
+          not be reassigned in the future, use the const keyword.Variables
+          declared with the let keyword are not hoistable. This means that you
+          can't use a variable until it's been declared and initialized.
+        </p>
+        <h1>
+          What is the difference between the arrow function and the regular
+          function?
+        </h1>
+        <p>
+          This value (also known as the execution context) is dynamic within a
+          regular JavaScript function. Because of the dynamic context, the value
+          of this is determined by how the function is invoked. A regular
+          function can be called in four different ways in JavaScript. During a
+          simple invocation, this has the value global object (or undefined if
+          the function is run in strict mode): The behavior of this inside an
+          arrow function differs significantly from the behavior of this inside
+          a regular function. The arrow function lacks its own execution
+          context. This value inside an arrow function always equals this value
+          from the outer function, regardless of how or where it is executed. In
+          other words, the arrow function lexically resolves this.
+        </p>
+        <h1>Why are templte and string used?</h1>
+        <p>
+          Template literals (template strings) let you use strings or embedded
+          expressions as strings. They are surrounded by backticks ". Const name
+          = 'Jack'; console, for example.
+        </p>
       </section>
     </main>
     <script src="Js/news.js"></script>

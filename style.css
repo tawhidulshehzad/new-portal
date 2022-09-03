@@ -67,3 +67,8 @@ button:active {
   color: rgb(243, 16, 16);
 }
 
+.news-btn {
+  color: blue;
+  border: none;
+  background-color: transparent
+}

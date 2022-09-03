@@ -65,21 +65,34 @@ const displayNews = (bulletins) => {
           <div class="d-flex justify-content-between px-2">
             <div class="d-flex">
               <div class="right-img-container">
-                <img class="w-100 raounded-5" src="${bulletin.author.img}" alt="" />
+                <img class="w-100 raounded-5" src="${
+                  bulletin.author.img
+                }" alt="" />
               </div>
               <div>
-                <h6 class="mb-0">${bulletin.author.name}</h6>
-                <p>${bulletin.author.published_date}</p>
+                <h6 class="mb-0">${
+                  bulletin.author.name ? bulletin.author.name : "Not found"
+                }</h6>
+                <p>${
+                  bulletin.author.published_date
+                    ? bulletin.author.published_date
+                    : "not found"
+                }</p>
               </div>
             </div>
             <div>
               <div class="d-flex gap-1 mt-2">
               <p><i class="fa fa-eye" aria-hidden="true"></i></p>
-                <p>${bulletin.total_view}</p>
+                <p>${
+                  bulletin.total_view ? bulletin.total_view : "Not found"
+                }</p>
+                
               </div>
             </div>
             <div>
-              <button onclick="modalShown('${bulletin._id}')" id="btn-details" data-bs-toggle="modal"
+              <button onclick="modalShown('${
+                bulletin._id
+              }')" id="btn-details" data-bs-toggle="modal"
               data-bs-target="#newsModal" > Details</button>
             </div>
           </div>
@@ -92,6 +105,16 @@ const displayNews = (bulletins) => {
   }
   toggleSpinner(false);
 };
+
+// blog function
+function getBlog(isShow) {
+  const blogContainer = document.getElementById("blog-container");
+  if (isShow === true) {
+    blogContainer.classList.add("d-none");
+  } else {
+    blogContainer.classList.remove("d-none");
+  }
+}
 
 const modalShown = (detailsId) => {
   url = `https://openapi.programming-hero.com/api/news/${detailsId}`;
@@ -108,17 +131,19 @@ const modalDisplay = (modalData) => {
   modalBody.innerHTML = `
   <p> ${modalData[0].details ? modalData[0].details : "Not found"}</p>
   <p>Author : ${
-    modalData[0].author ? modalData[0].author.name : "Not Available"
+    modalData[0].author.name ? modalData[0].author.name : "Not found"
   }</p>
   <p>Published : ${
-    modalData[0].author ? modalData[0].author.published_date : "not found"
+    modalData[0].author.published_date
+      ? modalData[0].author.published_date
+      : "not found"
   }</p>
   <p>Total view: ${
-    modalData[0].total_view ? modalData[0].total_view : "Total not found"
+    modalData[0].total_view ? modalData[0].total_view : "not found"
   }</p>
   `;
 };
-
+// spinner
 const toggleSpinner = (isLoading) => {
   const loderSections = document.getElementById("spinner");
   if (isLoading === true) {
@@ -128,7 +153,13 @@ const toggleSpinner = (isLoading) => {
   }
 };
 
+// blog container button
+document.getElementById("btn-blog").addEventListener("click", function () {
+  const blogContainer = document.getElementById("blog-container");
+  blogContainer.classList.remove("d-none");
+});
+
+// News button
+
 loadCategory();
-loadNews("08");
-
-
+// loadNews("08");
