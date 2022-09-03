@@ -1,4 +1,4 @@
-const loadNews = () => {
+const loadCategory = () => {
   url = `https://openapi.programming-hero.com/api/news/categories`;
   fetch(url)
     .then((response) => response.json())
@@ -8,27 +8,32 @@ const loadNews = () => {
 const displayCategory = (categories) => {
   const categoryContainer = document.getElementById("category-container");
   for (const category of categories) {
-    console.log(category);
+    // console.log(category);
     const categoryDiv = document.createElement("div");
     categoryDiv.innerHTML = `
-          <div class="text-center">
-            <button class="ctg-btn bg-white fs-5 px-3">${category.category_name}</button>
-          </div>
+            <button onclick="loadNews("${category.category_id}")" class="ctg-btn bg-white fs-5 px-3">${category.category_name}</button>
+          
     `;
     categoryContainer.appendChild(categoryDiv);
   }
 };
 
-loadNews();
+const loadNews = (categoryId) => {
+  url = `https://openapi.programming-hero.com/api/news/category/${categoryId}`;
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+};
+
+const displayNews = () => {
+  
+}
 
 
 
 
 
-
-
-
-
+loadCategory();
 
 // const displayCategory = (categories) => {
 //   const categoryContainer = document.getElementById("category-container");

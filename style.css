@@ -1,18 +1,24 @@
 /* header */
 
 .header {
-  
-  
-  
 }
 .header-right {
   margin-right: 10px;
 }
 .header-img {
   width: 50px;
-  
 }
 .ctg-btn {
   border: none;
   color: #5e5c5c;
+}
+
+.right-img-container {
+  width: 50px;
+  padding: 10px;
+  
+}
+.right-img-container img {
+  
+  border-radius: 20%;
 }
