@@ -33,15 +33,7 @@ const getItemsCount = (items) => {
   itemContainer.appendChild(itemDiv);
 };
 
-// Color change
-
-// function DisableNextButton(btnId) {
-//   const disableButton = document.getElementById(btnId);
-//   document.getElementById(btnId).disabled = "true";
-//   disableButton.style.background = "gray";
-// }
-
-// Load News
+// load news
 const loadNews = (categoryId) => {
   toggleSpinner(true);
   url = `https://openapi.programming-hero.com/api/news/category/${categoryId}`;
@@ -137,7 +129,7 @@ const toggleSpinner = (isLoading) => {
 };
 
 loadCategory();
-// loadNews("04");
+loadNews("08");
 
 //
 // const displayCategory = (categories) => {
