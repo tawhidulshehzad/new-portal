@@ -1,3 +1,18 @@
-body {
-  background: #0000;
+/* header */
+
+.header {
+  
+  
+  
+}
+.header-right {
+  margin-right: 10px;
+}
+.header-img {
+  width: 50px;
+  
+}
+.ctg-btn {
+  border: none;
+  color: #5e5c5c;
 }
