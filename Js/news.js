@@ -3,7 +3,8 @@ const loadCategory = () => {
   url = `https://openapi.programming-hero.com/api/news/categories`;
   fetch(url)
     .then((response) => response.json())
-    .then((data) => displayCategory(data.data.news_category));
+    .then((data) => displayCategory(data.data.news_category))
+    .catch((err) => console.log(err));
 };
 // display categories
 
