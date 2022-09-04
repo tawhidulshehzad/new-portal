@@ -108,23 +108,9 @@ const displayNews = (bulletins) => {
   getNews(false);
 };
 
-/**
- * const loadUserAsyc = async () => {
-  const url = `https://randomuser.me/api/?gender=female`;
-  try {
-    const res = await fetch(url);
-    const data = await res.json();
-    dispalyUserFetcher(data.results);
-  } catch (err) {
-    console.log(ett);
-  }
-};
-async
- */
 
 const modalShown = async (detailsId) => {
   const url = `https://openapi.programming-hero.com/api/news/${detailsId}`;
-  // fetch(url)
   try {
     const res = await fetch(url);
     const data = await res.json();
