@@ -104,17 +104,9 @@ const displayNews = (bulletins) => {
     newsContainer.appendChild(newsDiv);
   }
   toggleSpinner(false);
-};
 
-// blog function
-function getBlog(isShow) {
-  const blogContainer = document.getElementById("blog-container");
-  if (isShow === true) {
-    blogContainer.classList.add("d-none");
-  } else {
-    blogContainer.classList.remove("d-none");
-  }
-}
+  getNews(false);
+};
 
 const modalShown = (detailsId) => {
   url = `https://openapi.programming-hero.com/api/news/${detailsId}`;
@@ -153,13 +145,52 @@ const toggleSpinner = (isLoading) => {
   }
 };
 
+// blog function
+// function getBlog(isShow) {
+//   const blogContainer = document.getElementById("blog-container");
+//   const itemFoundContainer = document.getElementById("itemsFound-Container");
+//   if (isShow === true) {
+//     blogContainer.classList.add("d-none");
+
+//   } else {
+//     blogContainer.classList.remove("d-none");
+
+//   }
+// }
+function getNews(isShow) {
+  const newsContainer = document.getElementById("news-container");
+  const itemFoundContainer = document.getElementById("itemsFound-Container");
+  const blogContainer = document.getElementById("blog-container");
+  if (isShow === true) {
+    newsContainer.classList.add("d-none");
+    itemFoundContainer.classList.add("d-none");
+  } else {
+    newsContainer.classList.remove("d-none");
+    itemFoundContainer.classList.remove("d-none");
+    blogContainer.classList.add("d-none");
+  }
+}
+
 // blog container button
 document.getElementById("btn-blog").addEventListener("click", function () {
   const blogContainer = document.getElementById("blog-container");
   blogContainer.classList.remove("d-none");
+  const newsRemove = document.getElementById("news-container");
+  newsRemove.classList.add("d-none");
+  const itemFoundContainer = document.getElementById("itemsFound-Container");
+  itemFoundContainer.classList.add("d-none");
 });
 
 // News button
+document.getElementById("btn-News").addEventListener("click", function () {
+  getNews(false);
+  loadNews("08");
+});
+// Home
+document.getElementById("home-button").addEventListener("click", function () {
+  getNews(false);
+  loadNews("08");
+});
 
 loadCategory();
 // loadNews("08");
