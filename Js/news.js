@@ -108,11 +108,30 @@ const displayNews = (bulletins) => {
   getNews(false);
 };
 
-const modalShown = (detailsId) => {
-  url = `https://openapi.programming-hero.com/api/news/${detailsId}`;
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => modalDisplay(data.data));
+/**
+ * const loadUserAsyc = async () => {
+  const url = `https://randomuser.me/api/?gender=female`;
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    dispalyUserFetcher(data.results);
+  } catch (err) {
+    console.log(ett);
+  }
+};
+async
+ */
+
+const modalShown = async (detailsId) => {
+  const url = `https://openapi.programming-hero.com/api/news/${detailsId}`;
+  // fetch(url)
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    modalDisplay(data.data);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 const modalDisplay = (modalData) => {
@@ -181,4 +200,3 @@ document.getElementById("home-button").addEventListener("click", function () {
 });
 
 loadCategory();
-// loadNews("08");
