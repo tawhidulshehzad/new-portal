@@ -47,14 +47,13 @@ const displayNews = (bulletins) => {
   const newsContainer = document.getElementById("news-container");
   newsContainer.innerHTML = "";
   for (const bulletin of bulletins) {
-    console.log(bulletin);
     const newsDiv = document.createElement("div");
     newsDiv.innerHTML = `
-    <div class="d-flex m-2 p-2 shadow-sm ">
-      <div class=" col-3">
+    <div class="d-lg-flex m-2 p-2 shadow-sm ">
+      <div class=" col-lg-3">
         <img class="w-75" src="${bulletin.thumbnail_url}" alt="" />
       </div>
-      <div class="col-9">
+      <div class="col-lg-9">
         <div>
           <div>
             <h1 class="fs-5">${bulletin.title}</h1>
@@ -62,8 +61,8 @@ const displayNews = (bulletins) => {
             ${bulletin.details}
             </p>
           </div>
-          <div class="d-flex justify-content-between px-2">
-            <div class="d-flex">
+          <div class="d-lg-flex justify-content-between px-2">
+            <div class="d-lg-flex">
               <div class="right-img-container">
                 <img class="w-100 raounded-5" src="${
                   bulletin.author.img
@@ -116,7 +115,6 @@ const modalShown = (detailsId) => {
 };
 
 const modalDisplay = (modalData) => {
-  console.log(modalData[0].details);
   const modalTitle = document.getElementById("NewsTitleModal");
   modalTitle.innerText = modalData[0].title;
   const modalBody = document.getElementById("newsModalBody");
@@ -133,6 +131,7 @@ const modalDisplay = (modalData) => {
   <p>Total view: ${
     modalData[0].total_view ? modalData[0].total_view : "not found"
   }</p>
+  <img class="w-50" src="${modalData[0].image_url}" alt="" srcset="" />
   `;
 };
 // spinner
@@ -145,18 +144,6 @@ const toggleSpinner = (isLoading) => {
   }
 };
 
-// blog function
-// function getBlog(isShow) {
-//   const blogContainer = document.getElementById("blog-container");
-//   const itemFoundContainer = document.getElementById("itemsFound-Container");
-//   if (isShow === true) {
-//     blogContainer.classList.add("d-none");
-
-//   } else {
-//     blogContainer.classList.remove("d-none");
-
-//   }
-// }
 function getNews(isShow) {
   const newsContainer = document.getElementById("news-container");
   const itemFoundContainer = document.getElementById("itemsFound-Container");

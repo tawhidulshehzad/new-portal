@@ -19,9 +19,9 @@
     />
   </head>
   <body>
-    <header class="container">
+    <header class="container nav-width">
       <nav class="navbar bg-light mt-3">
-        <div class="header d-flex w-100">
+        <div class="header d-lg-flex nav-width w-100">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"
               ><span class="m-2 bg-warning p-1 rounded-2">Bangla24</span>News</a
@@ -29,7 +29,7 @@
           </div>
           <!--====== Nav Right side ======== -->
           <div>
-            <div class="d-flex header-right">
+            <div class="d-flex header-right right-twobotton">
               <div class="mx-3">
                 <button
                   class="text-decoration-none fs-5 news-btn"
@@ -46,8 +46,8 @@
                   Blog
                 </button>
               </div>
-              <div class="mx-3">
-                <img class="header-img rounded-circle" src="one.jpg" alt="" />
+              <div class="mx-3 header-ph">
+                <img class="header-img  rounded-circle" src="one.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -56,8 +56,8 @@
     </header>
     <hr class="container" />
     <main>
-      <section class="container d-flex justify-content-center">
-        <div id="category-container" class="text-center d-flex">
+      <section class="container d-lg-flex justify-content-center">
+        <div id="category-container" class="text-center d-lg-flex">
           <button id="home-button" class="ctg-btn bg-white fs-5 px-3">
             Home
           </button>
@@ -115,7 +115,7 @@
       </section>
 
       <!-- Blog section -->
-      <section class="container mt-3 w-50" id="blog-container">
+      <section class="container mt-3  mobile-blog" id="blog-container">
         <h1>What is the difference between var, let, and const?</h1>
         <p>
           The following are the distinctions between var, let, and const
@@ -151,7 +151,7 @@
           from the outer function, regardless of how or where it is executed. In
           other words, the arrow function lexically resolves this.
         </p>
-        <h1>Why are templte and string used?</h1>
+        <h1>Why are templte string used?</h1>
         <p>
           Template literals (template strings) let you use strings or embedded
           expressions as strings. They are surrounded by backticks ". Const name

@@ -70,5 +70,20 @@ button:active {
 .news-btn {
   color: blue;
   border: none;
-  background-color: transparent
+  background-color: transparent;
+}
+
+/*  mobile  */
+@media only screen and (max-width: 576px) {
+  .right-twobotton {
+    margin-top: 20px;
+  }
+  .nav-width {
+    width: 100%;
+    text-align: center;
+  }
+  .mobile-blog {
+    width: 100% !important;
+    margin: 0;
+  }
 }
